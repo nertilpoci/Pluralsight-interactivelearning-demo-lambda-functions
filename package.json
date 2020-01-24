@@ -1,0 +1,24 @@
+{
+  "name": "pluralsight-interactive-aws-content",
+  "version": "1.0.0",
+  "description": "Demo pluralsight interactive aws content",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm-run-all -s test:code",
+    "test:code": "mocha test/",
+    "deploy:github-pages": "git push origin master:gh-pages",
+    "test-watch": "npm-run-all  -p -r test-watch:code",
+    "test-watch:code": "mocha test/ --bail --watch --watch-extensions html"
+  },
+  "author": "Nertil Poci",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3",
+    "npm-run-all": "^4.0.2",
+    "node-fetch": "^2.6.0"
+  },
+  "dependencies": {
+   
+  }
+}
