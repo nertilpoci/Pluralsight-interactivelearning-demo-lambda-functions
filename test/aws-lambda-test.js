@@ -5,15 +5,16 @@ fetch = require('node-fetch'),
 
 
 describe('AWS Lambda', function () {
-
+ 
 
   it('should return the FullName from query string parameters firstName and lastName @handler', async function () {
     assert.equal("Jane Doe", (await handler({ queryStringParameters: { firstName: 'Jane', lastName: 'Doe' } })).body, 'Make sure the result returns FullName ');
   });
 
-  it('should fill the api gateway url with the live url from aws console in settings.js @publish @trigger', async function () {
-    assert.isNotNull(settings.apiGateWayUrl, 'Make sure to set the api gateway url.');
+  it('should fill the api gateway url with the live url from aws console in settings.js @publish @trigger',  function () {
+    assert.notEqual(settings.apiGateWayUrl,'', 'Make sure to set the api gateway url.');
   });
+  
   it('should return Full Name from live function using api gateway  @publish @trigger', async function () {
     assert.isNotNull(settings.apiGateWayUrl, 'Make sure to set the api gateway url.');
     try {
