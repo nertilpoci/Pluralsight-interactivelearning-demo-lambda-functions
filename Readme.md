@@ -1,24 +1,20 @@
-<!-- # Hello Pluralsight
+# Pluralsight Interactive Demo
 
 
 
 ## Short Description
 
-This is a sample project to test out how Projects work at Pluralsight. For this project, you'll be creating a basic website using HTML. If you want to deploy it to a real website, we'll even walkthrough how to do that!
-
+This is a demo project for Pluralsight Projects. For this project, you'll be creating a simple AWS Lambda function and expose it via API Gateway.
 
 
 ## Full Description
 
 ### Project Overview
 
-Learn the basics of Pluralsight Projects with this quick introduction, and become comfortable using Git and GitHub — even if you’ve never used them before.
+Learn how to create a AWS Lamba Function with this quick introduction, and become comfortable using Git and GitHub — even if you’ve never used them before.
 
-You'll edit a basic HTML page, as well as fork a GitHub repository and clone it down locally.
+You'll write basic funcion using Node.js, as well as fork a GitHub repository and clone it down locally.
 
-Here's what you'll build in this project:
-
-![Screenshot](https://raw.githubusercontent.com/pluralsight-projects/HelloPluralsightProject/master/screenshot.png)
 
 ### Applications and Tools You'll Need To Complete This Project
 
@@ -27,22 +23,13 @@ You'll need to have access to the following tools on your local machine to compl
 * Git
 * GitHub
 * Code Editor
-* Command Line / Terminal Access
+* AWS Account
 
 Never used Git and don’t have a code editor? We have a video that walks you through all the steps you’ll need to set this up.
 
 ### Prerequisite Knowledge
 
-Completing all of the tasks in this project requires knowledge of basic HTML.  You'll also need to have a working knowledge of git to commit local changes and push them up to a GitHub repository.  We'll walk you through that part, so if you haven't used Git before -- don't worry. We recommend that you should have already completed the following Pluralsight Courses:
-
-* [HTML Fundamentals](https://app.pluralsight.com/library/courses/html-fundamentals/table-of-contents)
-
-And have an understanding of the following topics:
-
-* Know what an HTML tag looks like and how to add one to an existing HTML file.
-* Know some of the most common tags, like `title`, `h1`, `ul`, and `li`.
-
-If you know these, you should be all set to jump in and give this project a shot!
+Completing all of the tasks in this project requires knowledge of Node.js, AWS Lambda Functions and AWS Api Gateway.  You'll also need to have a working knowledge of git to commit local changes and push them up to a GitHub repository.  We'll walk you through that part, so if you haven't used Git before -- don't worry.
 
 ### Live Demo
 
@@ -54,16 +41,16 @@ Wondering what this project will look like when you've completed it? [Follow thi
 
 In order to get this working, you'll need to have [Git](https://git-scm.com/) installed on your computer, and have a GitHub account. If this is your first time setting up Git, I'd recommend checking out Pluralsight's video on How to Setup Git for Pluralsight Projects in 5 Minutes to learn what you need to know.
 
-The very first step is to fork this repository to your personal GitHub account and clone it down locally. We'll be editing the `index.html` file in the root directory for this project.
+The very first step is to fork this repository to your personal GitHub account and clone it down locally. We'll be editing the `index.js` and `settings.js` file in the root directory for this project.
 
 ### Associate Project with Pluralsight
 
-After cloning this repository down, copy the ".projects_config" file from the [HelloPluralsightProject](#) and save that to this directory. This will allow your status to be reflected on the website while you're working through the project locally!
+After cloning this repository down, copy the ".projects_config" file from the [AWSLAmbdaProject](#) and save that to this directory. This will allow your status to be reflected on the website while you're working through the project locally!
 
 [//]: # (install: "npm install")
 ### Installation
 
-Run the following command from root folder of the `HelloPluralsightProject` to install all dependencies.
+Run the following command from root folder of the `AWSLAmbdaProject` to install all dependencies.
 
 ```
 $ npm install
@@ -87,29 +74,33 @@ $ npm test-watch
 
 
 
-[//]: # (project_id: hello-pluralsight)
-[//]: # (test: node_modules/.bin/mocha test/hello-pluralsight_test.js)
-## Hello Pluralsight
+[//]: # (project_id: aws-lambda)
+[//]: # (test: node_modules/.bin/mocha test/aws-lambda-test.js)
+## AWS Lambda Functions
 
-[//]: # (task_id: @title)
-### Add a Page Title
+[//]: # (task_id: @handler)
+### Function Logic
 
-Create a `title` element with your name that's a child of the `head` element.
+Using the code downloaded initial code, modify the index to create a `lambda function` that takes in the payload from an api gateway http request `{gatewayurl}?firstName=Jane&lastName=Doe` and outputs the Full Name `Jane Doe`
 
-[//]: # (task_id: @h1)
-### Add a Header Element
+[//]: # (task_id: @publish)
+### Create Lambda Function
 
-Add an `h1` that's a child of the `body` that says "Hello, Pluralsight!".
+Navigate to the aws console and create a new lambda function with using the author from scratch option. Then upload the code you edited locally.
 
-[//]: # (task_id: @ul)
-## Create an Unordered List
+[//]: # (task_id: @trigger)
+### Add API Gateway Trigger
 
-Create a `ul` element that's a child of the `body` that contains at least 2 `li` elements.
+Make your api publicaly accessible via a rest api by adding an API Gateway trigger to your function. 
+The api gateway should allow get request types. 
 
-[//]: # (task_id: @li)
-## What Do You Want to Learn?
 
-In each of those `li` elements, list out one thing you'd like to learn.
+[//]: # (task_id: @settings)
+### Add API Gateway to settings
+
+Copy the public url from the API Gateway trigger you created for the function 
+and assign it to `apiGateWayUrl` property in `settings.js` to the API Gateway public url.
+
 
 
 
@@ -117,12 +108,4 @@ In each of those `li` elements, list out one thing you'd like to learn.
 
 ## Next Steps
 
-Once all tests are passing, try pushing your master branch up to the `gh-pages` branch -- this will make your webpage available on the web! Here's a command to do that:
 
-```
-$ npm run deploy:github-pages
-```
-
-This will make your `index.html` file available at the URL:
-
-`http://<username>.github.io/HelloPluralsightProject/` -->
