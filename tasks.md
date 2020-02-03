@@ -67,13 +67,25 @@ Otherwise you should see an error stating that the test failed.
 
 
    <p> <img src="https://github.com/nertilpoci/Pluralsight-interactivelearning-demo-lambda-functions/blob/master/Screenshots/aws%20console%205.PNG?raw=true" width="220" height="240" />
+   <img src="https://github.com/nertilpoci/Pluralsight-interactivelearning-demo-lambda-functions/blob/master/Screenshots/aws%20console%206.PNG?raw=true" width="220" height="240" />
    </p>
 
 
+If sucessfull the test should return the fullname in the response on the body property
 
 
-[//]: # (task_id: @trigger)
-### Add API Gateway Trigger
+```
+
+Response:
+{
+  "statusCode": 200,
+  "body": "Jane Doe"
+}
+
+```
+
+
+### **Task 3** Add api gateway trigger to the lambdafunction created on **Task 2** 
 
 Make your api publicaly accessible via a rest api by adding an API Gateway trigger to your function. 
 The api gateway should allow get request types. 
