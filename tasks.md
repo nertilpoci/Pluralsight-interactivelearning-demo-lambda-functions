@@ -42,12 +42,35 @@ Otherwise you should see an error stating that the test failed.
 
 ### **Task 2** Create Lambda Function on the aws console.
 
-        1. Navigate to the aws console and login.
-        2. Navigate to the Lamba Functions management page
-        3. Create a new function by choosing to upload existing code
-        4. Test by passing a demo payload
 
-        
+1. Navigate to the aws console and login. 
+   
+   <p> <img src="https://raw.githubusercontent.com/nertilpoci/Pluralsight-interactivelearning-demo-lambda-functions/master/Screenshots/aws%20console.PNG" width="220" height="240" />
+   </p>
+
+2. Navigate to the Lamba Functions management page
+
+   <p> <img src="https://github.com/nertilpoci/Pluralsight-interactivelearning-demo-lambda-functions/blob/master/Screenshots/aws%20console%202.PNG?raw=true" width="220" height="240" />
+   </p>
+
+3. Create a new function by choosing to upload existing code
+
+   <p> <img src="https://github.com/nertilpoci/Pluralsight-interactivelearning-demo-lambda-functions/blob/master/Screenshots/aws%20console%203.PNG?raw=true" width="220" height="240" />
+   <img src="https://github.com/nertilpoci/Pluralsight-interactivelearning-demo-lambda-functions/blob/master/Screenshots/aws%20console%204.PNG?raw=true" width="220" height="240" />
+   </p>
+
+    
+   <p> 
+   </p>
+
+4. Test by passing a demo payload
+
+
+   <p> <img src="https://github.com/nertilpoci/Pluralsight-interactivelearning-demo-lambda-functions/blob/master/Screenshots/aws%20console%205.PNG?raw=true" width="220" height="240" />
+   </p>
+
+
+
 
 [//]: # (task_id: @trigger)
 ### Add API Gateway Trigger
