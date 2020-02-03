@@ -59,9 +59,6 @@ Otherwise you should see an error stating that the test failed.
    <img src="https://github.com/nertilpoci/Pluralsight-interactivelearning-demo-lambda-functions/blob/master/Screenshots/aws%20console%204.PNG?raw=true" width="220" height="240" />
    </p>
 
-    
-   <p> 
-   </p>
 
 4. Test by passing a demo payload
 
@@ -90,17 +87,39 @@ Response:
 Make your api publicaly accessible via a rest api by adding an API Gateway trigger to your function. 
 The api gateway should allow get request types. 
 
+1. Add a trigger from the functions page by using the add trigger button.
+ <p> <img src="https://github.com/nertilpoci/Pluralsight-interactivelearning-demo-lambda-functions/blob/master/Screenshots/aws%20console%207.PNG?raw=true" width="220" height="240" />
+   </p>
 
-[//]: # (task_id: @settings)
-### Add API Gateway to settings
-
-Copy the public url from the API Gateway trigger you created for the function 
+2. Pick Api Gateway from the available triggers
+    <p> 
+   <img src="https://github.com/nertilpoci/Pluralsight-interactivelearning-demo-lambda-functions/blob/master/Screenshots/aws%20console%209.PNG?raw=true" width="220" height="240" />
+   </p>
+3. Choose Rest Api Template and Leave the API open to public on the Security section.
+    <p>
+   <img src="https://github.com/nertilpoci/Pluralsight-interactivelearning-demo-lambda-functions/blob/master/Screenshots/aws%20console%209.PNG?raw=true" width="220" height="240" />
+   </p>
+4. Copy the public url from the API Gateway trigger you created for the function 
 and assign it to `apiGateWayUrl` property in `settings.js` to the API Gateway public url.
+    <p> 
+   <img src="https://github.com/nertilpoci/Pluralsight-interactivelearning-demo-lambda-functions/blob/master/Screenshots/aws%20console%2010.PNG?raw=true" width="220" height="240" />
+   </p>
+
+  Test: If successfull, you should see a a message that Task 3  tests passed 
+
+  
+ <span style="color:green">√</span>  Task 3 : should return Full Name from live function using api gateway
+
+
+
+Otherwise you should see an error stating that the test failed and why.
+
+
+
+ <span style="color:red">  Make sure to set the api gateway url. </span>
+ <span style="color:red">  Api Gateway url not reacheable </span>
 
 
 
 
-
-
-## Next Steps
 
