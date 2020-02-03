@@ -7,7 +7,7 @@ fetch = require('node-fetch'),
 describe('AWS Lambda', function () {
  
 
-  it('should return the FullName from query string parameters firstName and lastName @handler', async function () {
+  it('Task 1 : should return the FullName from query string parameters firstName and lastName', async function () {
     assert.equal("Jane Doe", (await handler({ queryStringParameters: { firstName: 'Jane', lastName: 'Doe' } })).body, 'Make sure the result returns FullName ');
   });
 

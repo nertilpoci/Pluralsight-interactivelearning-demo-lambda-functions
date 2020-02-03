@@ -74,38 +74,3 @@ $ npm test-watch
 
 
 
-[//]: # (project_id: aws-lambda)
-[//]: # (test: node_modules/.bin/mocha test/aws-lambda-test.js)
-## AWS Lambda Functions
-
-[//]: # (task_id: @handler)
-### Function Logic
-
-Using the code downloaded initial code, modify the index to create a `lambda function` that takes in the payload from an api gateway http request `{gatewayurl}?firstName=Jane&lastName=Doe` and outputs the Full Name `Jane Doe`
-
-[//]: # (task_id: @publish)
-### Create Lambda Function
-
-Navigate to the aws console and create a new lambda function with using the author from scratch option. Then upload the code you edited locally.
-
-[//]: # (task_id: @trigger)
-### Add API Gateway Trigger
-
-Make your api publicaly accessible via a rest api by adding an API Gateway trigger to your function. 
-The api gateway should allow get request types. 
-
-
-[//]: # (task_id: @settings)
-### Add API Gateway to settings
-
-Copy the public url from the API Gateway trigger you created for the function 
-and assign it to `apiGateWayUrl` property in `settings.js` to the API Gateway public url.
-
-
-
-
-
-
-## Next Steps
-
-
